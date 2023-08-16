@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: goef
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: goef
+    app.kubernetes.io/part-of: byoc-app-gxmd
+  name: goef
+spec:
+  rules:
+  - host: goef-byoc-mpnw-tenant.apps.03eb827c803ab4497769.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: goef
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

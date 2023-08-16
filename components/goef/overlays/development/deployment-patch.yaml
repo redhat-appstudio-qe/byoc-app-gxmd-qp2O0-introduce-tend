@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: goef
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-mpnw-tenant/byoc-app-gxmd/goef@sha256:28e2782d4b4d3c55be89af170874af49c2d20c5cd2c09461f75d738e647ef92a
+        name: my-java-quarkus
+        resources: {}
+status: {}

@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: goef
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-mpnw-tenant/byoc-app-gxmd/goef@sha256:28e2782d4b4d3c55be89af170874af49c2d20c5cd2c09461f75d738e647ef92a
         name: my-java-quarkus
         ports:
         - containerPort: 8081
